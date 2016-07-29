@@ -1,0 +1,25 @@
+/*Given two arrays, write a function to compute their intersection.
+
+Example:
+Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
+
+Note:
+Each element in the result must be unique.
+The result can be in any order.*/
+
+public class Solution {
+    public int[] Intersection(int[] nums1, int[] nums2) {
+        
+        List<int> lst = new List<int>();
+        nums1 = nums1.Distinct().ToArray();
+        for(int i =0;i<nums1.Length;i++)
+        {
+            if(nums2.Contains(nums1[i]))
+            {
+                lst.Add(nums1[i]);
+            }
+        }
+        return lst.ToArray();
+        
+    }
+}
