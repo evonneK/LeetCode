@@ -10,14 +10,18 @@ Follow up:
  public class Solution {
     public int AddDigits(int num) 
     {
-        //方法1
-        int output = 0;
-        while(num>0)
-        {
-            output +=num%10;
-            num = num/10;
-        }
-        return output;
+            //方法1
+            while (num>9)
+            {
+                int output = 0;
+                while (num > 0)
+                {
+                    output += num % 10;
+                    num = num / 10;
+                }
+                num = output;
+            }
+            return num;
     
         //方法二
         return (num - 1) % 9 + 1;
