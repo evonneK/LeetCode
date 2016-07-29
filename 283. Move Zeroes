@@ -8,6 +8,7 @@ Minimize the total number of operations.*/
 
 public class Solution {
     public void MoveZeroes(int[] nums) {
+             //将非0数字向前挪
             int idx = 0;
             for (int i = 0; i < nums.Length; i++)
             {
@@ -17,7 +18,7 @@ public class Solution {
                     idx++;
                 }
             }
-
+            //后面的元素全部补0
             for (int i = idx; i < nums.Length; i++)
             {
                 nums[i] = 0;
